@@ -3,133 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <title>
-      Test
+      Any Hello
     </title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet/less" href="css/styles.less">
-    <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="css/styles.css">
      <script src="js/jquery-1.10.2.min.js"></script>
-     <script src="js/jquery-migrate-1.2.1.min.js"></script>
      <script src="js/jquery.easing.1.3.js"></script>
-     <script src="js/less-1.3.3.min.js" ></script>
-     <script>
-     document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
-     </script>
-     <script src="js/livereload.js"></script>
     </head>
   <body>
-   <style>
-        body {
-            height: 2000px;
-        }
-       .wrap {
-         padding: 20px 100px;
-       }
 
-      .button {
-        height: 100px;
-        background-color: #F5FABE
-      }
-      .field {
-        /*height: 200px;*/
-        /*background-color: #F08A64;*/
-        font-size: 18px;
-        color: #fff;
-        /*padding: 20px;*/
-        text-align: center;
-      }
-       .field img {
-        max-width: 100%;
-       }
-      .field .in {
-        padding: 20px;
-      }
-      .field1 {
-        /*background-color: #F08A64;*/
-      }
-      .field2 {
-        background-color: #A98EF9;
-      }
-   </style>
+    Any Hello
 
-    <div class="wrap">
-        <div class="button"></div>
-        <div class="field field1">
-            <div class="in">
-                <img src="images/pic.jpg" alt="">
-            </div>
-        </div>
-        <div class="field field2">
-            <div class="in">Lorem фыввфipsum dolor sit amet, consectetur adipisicing elit. Eum, obcaecati suscipit pariatur omnis tenetur placeat modi sed autem earum deleniti. Optio, doloribus, veniam perferendis atque et dolore numquam sed fuga. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, obcaecati suscipit pariatur omnis tenetur placeat modi sed autem earum deleniti. Optio, doloribus, veniam perferendis atque et dolore numquam sed fuga. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, obcaecati suscipit pariatur omnis tenetur placeat modi sed autem earum deleniti. Optio, doloribus, veniam perferendis atque et dolore numquam sed fuga. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, obcaecati suscipit pariatur omnis tenetur placeat modi sed autem earum deleniti. Optio, doloribus, veniam perferendis atque et dolore numquam sed fuga.</div>
-        </div>
-    </div>
-
-
-
-    <script src="js/jquery.transit.min.js"></script>
-    <script>
-
-        $(document).ready(function() {
-
-            (function(){
-
-                var process = lock = false;
-
-                var button =  $('.button'),
-                    field = $('.field1'),
-                    parentItem = button;
-
-                $('.field').transition({ perspective: 1000, rotateX: 0, opacity: 1, scale: 1 }, 0);
-
-                button.click(function(){
-
-                    if(!lock){
-
-                        if(process)return;
-                            process = true;
-
-                        parentItem.attr('data-height', field.height() );
-
-
-                        field
-                            .animate({height:0}, {queue:false, duration:800, easing:'easeInOutCubic', complete:function(){
-                                  $(this).css('display','none');
-                                  process = false;
-                                  lock = true;
-                                }})
-                            .transition({ perspective: 2000, rotateX: -90, opacity: 0, scale: 1}, 500, 'easeInSine');
-                    } else {
-
-                        if (process) return;
-                            process = true;
-
-                         var h = parentItem.attr('data-height');
-
-                        field
-                            .css('display','block')
-                            .animate({height:h}, {queue:false, duration:600, easing:'easeInOutCubic', complete:function(){
-                                process = false;
-                                lock = false;
-                            }})
-                            .transition({ perspective: 1000, rotateX: 0, opacity: 1, scale: 1}, 500, 'easeInSine');
-
-                   }
-
-                }); /* Toogle Performed */
-
-                // Fix for responsive
-                $(window).resize(function(){
-                    if (!lock) field.css('height','auto');
-                })
-
-            })();  /* Function Performed */
-
-
-        }); /*  Document Performed */
-
-
-    </script>
   </body>
 </html>
